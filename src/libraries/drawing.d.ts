@@ -62,6 +62,9 @@ interface Triangle extends DrawnObject {
 	Filled: boolean;
 }
 
+/**
+ * @hidden
+ */
 type DrawnObjectByString = {
 	Line: Line;
 	Text: Text;
@@ -72,7 +75,12 @@ type DrawnObjectByString = {
 	Triangle: Triangle;
 };
 
-declare const Drawing: {
+/**
+ * @hidden
+ */
+type DrawingAPI = {
 	new <T extends keyof DrawnObjectByString>(type: T): DrawnObjectByString[T];
 	Fonts: { UI: 0; System: 1; Plex: 2; Monospace: 3 };
 };
+
+declare const Drawing: DrawingAPI
