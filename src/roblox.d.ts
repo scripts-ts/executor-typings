@@ -2,19 +2,19 @@ interface DataModel extends Instance {
 	HttpGet(url: string): string;
 }
 
-declare module "@rbxts/services" {
-	export const CoreGui: BasePlayerGui & {
+interface Services {
+	CoreGui: BasePlayerGui & {
 		Version: number;
 		SelectionImageObject: GuiObject;
 	};
-	export const VirtualInputManager: Instance & {
+	VirtualInputManager: Instance & {
 		SendKeyEvent(isPressed: boolean, keyCode: Enum.KeyCode, isRepeatedKey: boolean, pluginGui: GuiObject): void;
 		SendMouseWheelEvent(x: number, y: number, isForwardScroll: boolean, pluginGui: GuiObject): void;
 		SendMouseButtonEvent(x: number, y: number, mouseButton: number, isDown: boolean, pluginGui: GuiObject): void;
 		SendMouseMovementEvent(x: number, y: number, pluginGui: GuiObject): void;
 		SendTextInputCharacterEvent(character: string, gui: GuiObject): void;
 	};
-	export const VirtualUser: Instance & {
+	VirtualUser: Instance & {
 		Button1Down(position?: Vector2, camera?: CFrame): void;
 		Button1Up(position?: Vector2, camera?: CFrame): void;
 		Button2Down(position?: Vector2, camera?: CFrame): void;
@@ -26,6 +26,12 @@ declare module "@rbxts/services" {
 		KeyUp(key: string): void;
 		TypeKey(key: string): void;
 	};
+}
+
+declare module "@rbxts/services" {
+	export const CoreGui: Services["CoreGui"];
+	export const VirtualInputManager: Services["VirtualInputManager"];
+	export const VirtualUser: Services["VirtualUser"];
 
 	export const AnalyticsService: AnalyticsService;
 	export const AnimationClipProvider: AnimationClipProvider;
