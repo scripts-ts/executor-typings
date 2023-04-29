@@ -2,10 +2,7 @@
  * Loads chunk as a Lua function with optional `chunk_name` and returns it if compilation is successful.
  * Otherwise, if an error has occurred during compilation, `nil` followed by the error message will be returned.
  */
-declare const loadstring: (
-	chunk: string,
-	chunk_name?: string,
-) => LuaTuple<[(...args: any[]) => any, undefined]> | LuaTuple<[undefined, string]>;
+declare const loadstring: (chunk: string, chunk_name?: string) => (...args: any[]) => any;
 
 /**
  * Returns true if the current thread is a Synapse thread.
