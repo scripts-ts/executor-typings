@@ -1,6 +1,6 @@
 {
   "name": "synapse-x-types",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "Synapse X typings for Typescript",
   "scripts": {
     "build": "rbxtsc",

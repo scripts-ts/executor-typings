@@ -1,7 +1,9 @@
 /// <reference no-default-lib="true"/>
 
+/// <reference path="roblox.d.ts" />
+
 /// <reference path="libraries/syn.d.ts" />
-/// <reference path="libraries/bit.d.ts" />
+/// <reference path="libraries/bit.d.ts" />	
 /// <reference path="libraries/drawing.d.ts" />
 
 /// <reference path="functions/env.d.ts" />
