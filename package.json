@@ -1,6 +1,6 @@
 {
   "name": "synapse-x-types",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Synapse X typings for Typescript",
   "scripts": {
     "build": "rbxtsc",
@@ -11,7 +11,9 @@
   "license": "ISC",
   "main": "src/index.d.ts",
   "types": "src/index.d.ts",
-	"files": ["/src/**/*.d.ts"],
+  "files": [
+    "/src/**/*.d.ts"
+  ],
   "publishConfig": {
     "access": "public"
   },
