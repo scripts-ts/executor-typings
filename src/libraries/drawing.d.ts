@@ -83,4 +83,4 @@ type DrawingAPI = {
 	Fonts: { UI: 0; System: 1; Plex: 2; Monospace: 3 };
 };
 
-declare const Drawing: DrawingAPI
+declare const Drawing: DrawingAPI;

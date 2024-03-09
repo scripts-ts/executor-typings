@@ -1,7 +1,7 @@
 {
-  "name": "luau-executor-types",
+  "name": "@script-ts/types",
   "version": "1.0.0",
-  "description": "Luau executor typings for Typescript",
+  "description": "Typings for luau and roblox-ts",
   "scripts": {
     "build": "rbxtsc",
     "watch": "rbxtsc -w"

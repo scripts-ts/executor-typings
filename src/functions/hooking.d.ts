@@ -1,11 +1,17 @@
 /**
+ * Hooked Callback.
+ * @hidden
+ */
+type HookedCallback<F extends (...args: any[]) => any> = (...args: Parameters<F>) => ReturnType<F>;
+
+/**
  * Hooks function `old`, replacing it with the function `hook`.
  * The old function is returned, you *must* use this function in order to call the original function.
  * @param func The function to hook.
  * @param hook The function to call instead of the original function.
  * @returns The original function.
  */
-declare const hookfunction: <F extends (...args: any[]) => any>(func: F, hook: F) => F;
+declare const hookfunction: <F extends (...args: any[]) => any>(func: F, hook: HookedCallback<F>) => F;
 
 /**
  * Hooks the metamethod passed in the `object`'s metatable with `hook`.
@@ -23,15 +29,22 @@ declare const hookmetamethod: <M extends Metamethods>(
 	hook: MetamethodFunctions[M],
 ) => MetamethodFunctions[M];
 
+/**
+ * Metamethods are special methods that are called when certain operations are performed on a table.
+ */
 type Metamethods = "__index" | "__newindex" | "__namecall";
 
 /**
+ * Metamethod functions are the functions that are called when certain operations are performed on a table.
  * @hidden
  */
 type MetamethodFunctions = {
 	__index: (this: any, key: string) => any;
 	__newindex: (this: any, key: string, value: any) => void;
 	__namecall: (this: any, ...args: any[]) => any;
+	__call(this: any, ...args: any[]): any;
+	__tostring(this: any): string;
+	__len(this: any): number;
 };
 
 /**

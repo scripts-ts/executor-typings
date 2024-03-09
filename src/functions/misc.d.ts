@@ -1,6 +1,5 @@
 declare const setclipboard: (clipboard: string) => void;
 declare const setfflag: (flag: string, value: string) => void;
-declare const getsynasset: (path: string) => string;
 
 /**
  * Saves the current game into your workspace folder. You can use `config` to customize options for this.

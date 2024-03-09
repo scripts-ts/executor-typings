@@ -1,24 +1,20 @@
 /**
- * Returns the environment that will be applied to each script ran by Synapse.
+ * Returns the environment that will be applied to all executor scripts.
  * @returns The environment.
  */
-declare const getgenv: () => SynapseGlobals;
+declare const getgenv: () => ExecutorGlobals;
 
-interface SynapseGlobals {
-	[key: string]: any;
-}
+interface ExecutorGlobals {}
 
 /**
  * Returns the game's client global environment.
  * @returns The environment.
  */
-declare const getrenv: () => RobloxGlobals;
+declare const getrenv: () => RobloxEnv;
 
 interface RobloxEnv {
-	_G: RobloxGlobals;
+	_G: _G;
 }
-
-interface RobloxGlobals {}
 
 /**
  * Returns the Lua registry.
