@@ -32,9 +32,9 @@ declare const decompile: (
 /**
  * Sets the current thread identity.
  */
-declare const setthreadidentity: (identity: string) => void;
+declare const setthreadidentity: (identity: number) => void;
 
 /**
  * Returns the current thread identity.
  */
-declare const getthreadidentity: () => string;
+declare const getthreadidentity: () => number;
