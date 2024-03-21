@@ -4,6 +4,7 @@
 
 /// <reference path="libraries/bit.d.ts" />
 /// <reference path="libraries/drawing.d.ts" />
+/// <reference path="libraries/debug.d.ts" />
 
 /// <reference path="functions/env.d.ts" />
 /// <reference path="functions/fs.d.ts" />
