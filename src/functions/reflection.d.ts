@@ -28,3 +28,13 @@ declare const decompile: (
 	script: Script | ModuleScript | ((...args: any[]) => any) | string,
 	timeout?: number,
 ) => string;
+
+/**
+ * Sets the current thread identity.
+ */
+declare const setthreadidentity: (identity: string) => void;
+
+/**
+ * Returns the current thread identity.
+ */
+declare const getthreadidentity: () => string;

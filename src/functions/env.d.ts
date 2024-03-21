@@ -14,6 +14,8 @@ declare const getrenv: () => RobloxEnv;
 
 interface RobloxEnv {
 	_G: _G;
+	require: (module: string) => any;
+	debug: typeof debug;
 }
 
 /**

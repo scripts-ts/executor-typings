@@ -1,6 +1,6 @@
 {
   "name": "@script-ts/types",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Typings for luau and roblox-ts",
   "scripts": {
     "build": "rbxtsc",
@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@rbxts/compiler-types": "^2.3.0-types.0",
-    "@rbxts/types": "^1.0.754",
+    "@rbxts/types": "^1.0.764",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "eslint": "^8.56.0",
